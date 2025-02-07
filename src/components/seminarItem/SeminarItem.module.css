@@ -1,0 +1,166 @@
+.seminar {
+    display: flex;
+    flex-direction: row;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 60%;
+    transition: transform 0.3s ease;
+}
+
+.seminar:hover {
+    transform: translateY(-5px);
+}
+
+.seminar__image {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.seminar__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.seminar__title {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.seminar__date,
+.seminar__time {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.seminar__description {
+    font-size: 1em;
+    color: #777;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.seminar__button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+.seminar__button:hover {
+    background-color: #0056b3;
+}
+
+/* Editing mode styles */
+.seminar__edit-fields,
+.seminar__view-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.seminar__edit-fields input,
+.seminar__edit-fields textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.seminar__edit-fields textarea {
+    resize: vertical;
+}
+
+.seminar__view-fields .seminar__title,
+.seminar__view-fields .seminar__date,
+.seminar__view-fields .seminar__time,
+.seminar__view-fields .seminar__description {
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.seminar__buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: flex-start;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.modal__content {
+    
+    text-align: center;
+}
+.modal__buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+.modal__button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+.modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .modal__input, .modal__textarea {
+    width: 80%;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .modal__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
